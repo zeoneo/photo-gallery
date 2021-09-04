@@ -8,7 +8,7 @@ import frontmatter from 'remark-frontmatter';
 import highlight from 'rehype-highlight';
 import yaml from 'js-yaml';
 import dayjs from 'dayjs';
-
+import { mdsvex } from 'mdsvex';
 let parser = unified()
     .use(parse)
     .use(gfm)
