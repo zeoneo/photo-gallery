@@ -1,4 +1,14 @@
 /* Write your global styles here, in SCSS syntax */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "../node_modules/bootstrap/scss/variables";
+
+@import "../node_modules/bootstrap/scss/mixins";
+
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
 
 .codeblock {
     box-shadow: 0 5px 20px rgba(46 53 64 / 20%),0 1px 5px rgba(46 53 64 / 30%);

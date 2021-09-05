@@ -12,14 +12,14 @@ excerpt: First blog published on svelte kit
 
 Something about the blog
 
-# Table of Content
+### Table of Content
 
 
-# Title 
+### Title 
 
 sdfsd
 
-## Brief Introduction
+#### Brief Introduction
 
 My blog
 
@@ -50,12 +50,7 @@ Text in command pallete
 </script>
 
 <svelte:head>
-	<link
-		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css"
-	/>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono" />
+	<title>My First Blog Post</title>
 </svelte:head>
 
 <div class="g-app-wrapper">
@@ -68,4 +63,4 @@ Text in command pallete
 
 
 
-<img src="/author.jpeg" style="" />
+<img src="/author.jpeg" style="" alt="author" title="author" />
