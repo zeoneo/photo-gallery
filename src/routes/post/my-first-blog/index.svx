@@ -4,7 +4,11 @@ date: 2021-09-04
 excerpt: First blog published on svelte kit
 ---
 
+<script>
+    import HelloWorld from '$lib/HelloWorld.svelte';
+    </script>
 
+<HelloWorld />
 
 Something about the blog
 
@@ -40,4 +44,3 @@ setTimeout(cb, timeInms);
 
 
 
-![author.jpeg](author.jpeg)
