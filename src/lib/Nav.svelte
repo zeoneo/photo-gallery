@@ -16,7 +16,7 @@
 				<NavLink class="active" href="/">Photo Albums</NavLink>
 			</NavItem>
 			<NavItem>
-				<NavLink href="/blogs">Blogs</NavLink>
+				<NavLink href="/post">Posts</NavLink>
 			</NavItem>
 			<NavItem>
 				<NavLink href="/pricing">Pricing</NavLink>
