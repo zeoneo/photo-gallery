@@ -11,10 +11,21 @@ const escape = code => {
 };
 
 const highlighter = async (code, lang) => {
-  const highlighter = await shiki.getHighlighter({ theme: "github-dark" });
+  const highlighter = await shiki.getHighlighter({ theme: "dark-plus" });
   const highlightedCode = highlighter.codeToHtml(code, lang || "text");
-  return `{@html \`${escape(highlightedCode)}\` }`;
+  return `<div class="codeblock"> {@html \`${escape(highlightedCode)}\` } </div>`;
 };
+
+/**
+
+<div class="codeblock">
+const highlighter = async (code, lang) => {
+  <pre class="shiki" style="background-color: #31324e;color: #c9cdd7;" data-language="${lang}">
+  {@html \`${escape(highlightedCode)}\` }
+  </pre>
+  </div>
+
+ */
 
 export default {
 //   layout: {

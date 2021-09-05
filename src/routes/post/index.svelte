@@ -93,15 +93,16 @@
 		{/each} -->
 	</div>
 	<div class="posts__cards">
-		<!-- {#each filteredPosts as post}
-			<PostCard
+		{#each filteredPosts as post}
+			<div><a href={`/post/${post.slug}`}>{post.title}</a></div>
+			<!-- <PostCard
 				title={post.title}
 				href={`/post/${post.slug}`}
 				desc={post.desc}
 				date={post.date}
 				tags={post.tags}
-			/>
-		{/each} -->
+			/> -->
+		{/each}
 	</div>
 </section>
 

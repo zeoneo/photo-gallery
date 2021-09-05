@@ -1,0 +1,18 @@
+/* Write your global styles here, in SCSS syntax */
+
+.codeblock {
+    box-shadow: 0 5px 20px rgba(46 53 64 / 20%),0 1px 5px rgba(46 53 64 / 30%);
+    // margin-left: -2rem;
+    // margin-right: -2rem;
+    margin-bottom: 2.5rem;
+    border-radius: 5px;
+}
+
+pre {
+    overflow: auto;
+    overflow-wrap: break-word;
+    padding: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    white-space: pre-wrap;
+  }

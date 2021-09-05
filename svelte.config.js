@@ -7,7 +7,7 @@ import path from "path"
 /** @type {import('@sveltejs/kit').Config} */
 export default {
   extensions: [".svelte", ...mdsvexConfig.extensions],
-  preprocess: [mdsvex(mdsvexConfig), sveltePreprocess()],
+  preprocess: [mdsvex(mdsvexConfig), sveltePreprocess({})],
   kit: {
     adapter: adapterStatic(),
     target: "#svelte",
