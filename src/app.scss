@@ -26,3 +26,8 @@ pre {
     margin-bottom: 3rem;
     white-space: pre-wrap;
   }
+
+  .g-app-wrapper {
+      display: flex;
+      flex-direction: column;
+  }

@@ -1,10 +1,11 @@
 <script>
+  import MyCarousel from '$lib/components/MyCarousel.svelte';
 </script>
 
 <svelte:head>
-	<title>Home</title>
+  <title>Home</title>
 </svelte:head>
 
 <div>
-	<h1>Home Page</h1>
+  <MyCarousel />
 </div>
