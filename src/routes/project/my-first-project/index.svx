@@ -6,41 +6,68 @@ excerpt: First blog published on svelte kit
 
 <script>
     import HelloWorld from '$lib/HelloWorld.svelte';
-    </script>
-
-<HelloWorld />
-
-Something about the blog
-
-## Brief Introduction
-
-My blog
-
-- first
-- second
-- third
+    import Gallery from '$lib/components/Gallery.svelte';
+</script>
 
 
-```
-Text in command pallete
-```
-
-
-### Code
-
-
-```html
-<div>
-    <p> Hello World</p>
-</div>
-```
-
-
-```js
-setTimeout(cb, timeInms);
-```
-
-
-
-
-
+<Gallery gap="10" maxColumnWidth="250">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+     <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+     <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+    <img src="/image1.jpeg" alt="">
+    <img src="/image2.jpeg" alt="">
+    <img src="/image3.jpeg" alt="">
+</Gallery>

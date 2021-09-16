@@ -213,3 +213,6 @@ pre {
     z-index: 5;
 }
 
+
+img { opacity: .9; transition: all .2s }
+img:hover { opacity: 1; transform: scale(1.04) }
