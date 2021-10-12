@@ -20,4 +20,4 @@ excerpt: First blog published on svelte kit
     ];
 </script>
 
-<Gallery gap=10 maxColumnWidth=250 {imageData} ></Gallery>
+<Gallery gap=10 maxColumnWidth='350' {imageData} ></Gallery>

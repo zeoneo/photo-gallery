@@ -9,7 +9,7 @@
   export let maxColumnWidth = 250;
   export let imageData = [];
   let selected = '';
-  let activeIndex = null;
+  let activeIndex = undefined;
   let data = [];
 
   const dispatch = createEventDispatcher();
@@ -26,7 +26,7 @@
     console.log(e.target.src);
     // document.body.style.overflow = 'hidden';
     // document.body.style.position = 'sticky';
-    activeIndex = items.findIndex((value) => value === e.target.src);
+    activeIndex = items.findIndex((value) => e.target.src.endsWith(value));
     dispatch('click', { src: e.target.src });
   }
   async function Draw() {
@@ -79,6 +79,14 @@
     <img src={items[activeIndex]} alt="" />
     <CarouselControl direction="prev" bind:activeIndex {items} />
     <CarouselControl direction="next" bind:activeIndex {items} />
+    <button
+      type="button"
+      class="btn-close btn-close-white"
+      aria-label="Close"
+      on:click={(e) => {
+        activeIndex = undefined;
+      }}
+    />
     <!-- </Carousel> -->
   </div>
 {/if}
