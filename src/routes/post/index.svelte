@@ -8,6 +8,8 @@
 
 <script lang="ts">
   import { fly } from 'svelte/transition';
+  import './post.scss';
+
   // import SEO from '$lib/components/SEO.svelte';
   import TravelBlogCard from '$lib/components/TravelBlogCard.svelte';
   // import ProgressButton from '$lib/components/ProgressButton.svelte';
