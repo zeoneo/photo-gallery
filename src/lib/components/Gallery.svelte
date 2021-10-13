@@ -1,8 +1,11 @@
 <script language="ts">
+  import { browser } from '$app/env';
+
   import { onMount, createEventDispatcher } from 'svelte';
   import { Carousel, CarouselControl, CarouselIndicators, CarouselItem } from 'sveltestrap';
   import { getNewCarouselActiveIndex } from './Utils';
-
+  import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
+  import PhotoSwipe from 'photoswipe/dist/photoswipe.esm.js';
   import { tick } from 'svelte';
   import { language } from 'gray-matter';
   export let gap = 10;
@@ -37,6 +40,15 @@
       const idx = i % columnCount;
       columns[idx] = [...(columns[idx] || []), imageData[i].src];
     }
+    if (browser) {
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: '#gallery--simple',
+
+        children: 'a',
+        pswpModule: PhotoSwipe
+      });
+      lightbox.init();
+    }
   }
   function handleKeydown(event) {
     let direction = null;
@@ -53,7 +65,7 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-{#if columns}
+<!-- {#if columns}
   <div id="gallery" bind:clientWidth={galleryWidth} style={galleryStyle}>
     {#each columns as column}
       <div class="column">
@@ -63,33 +75,63 @@
       </div>
     {/each}
   </div>
-{/if}
+{/if} -->
 
-{#if typeof activeIndex !== 'undefined'}
-  <div
-    class="image-viewer"
-    on:click={(e) => {
-      if (e.target === e.currentTarget) {
-        activeIndex = undefined;
-      }
-    }}
+<div class="pswp-gallery pswp-gallery--single-column" id="gallery--simple">
+  <a
+    href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
+    data-pswp-width="1669"
+    data-pswp-height="2500"
+    target="_blank"
   >
-    <!-- <Carousel {items} bind:activeIndex> -->
-    <CarouselIndicators bind:activeIndex {items} />
-    <img src={items[activeIndex]} alt="" />
-    <CarouselControl direction="prev" bind:activeIndex {items} />
-    <CarouselControl direction="next" bind:activeIndex {items} />
-    <button
-      type="button"
-      class="btn-close btn-close-white"
-      aria-label="Close"
-      on:click={(e) => {
-        activeIndex = undefined;
-      }}
-    />
-    <!-- </Carousel> -->
+    <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="" />
+  </a>
+
+  <!-- cropped thumbnail -->
+  <a
+    href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg"
+    data-pswp-width="1875"
+    data-pswp-height="2500"
+    data-cropped="true"
+    target="_blank"
+  >
+    <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt="" />
+  </a>
+
+  <!-- data-pswp-src with custom URL in href -->
+  <a
+    href="https://unsplash.com"
+    data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+    data-pswp-width="2500"
+    data-pswp-height="1666"
+    target="_blank"
+  >
+    <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="" />
+  </a>
+
+  <!-- Without thumbnail -->
+  <a
+    href="http://example.com"
+    data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg"
+    data-pswp-width="2500"
+    data-pswp-height="1668"
+    target="_blank"
+  >
+    No thumbnail
+  </a>
+
+  <!-- wrapped with any element -->
+  <div>
+    <a
+      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg"
+      data-pswp-width="2500"
+      data-pswp-height="1667"
+      target="_blank"
+    >
+      <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg" alt="" />
+    </a>
   </div>
-{/if}
+</div>
 
 <style>
   #gallery {
