@@ -5,9 +5,7 @@
 </script>
 
 <div style="display: flex;flex-direction: column;">
-  <header style="display: block; flex:0">
-    <Nav />
-  </header>
+  <Nav />
   <main style="flex:1; display:flex; flex-direction:column" class="container-fluid">
     <slot />
   </main>
